@@ -23,6 +23,7 @@ body:after{
   height: 100%;
   width: 100%;
   top: 0;
+  z-index: 0;
   left: 0;
 }
 h1,h2,h3{
@@ -33,6 +34,13 @@ h1,h2,h3{
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  z-index: 5;
+}
+.loader {
+  padding: 3em;
+}
+.loader p {
+  font-size: 2em;
 }
 header{
   background-color: #0062ab;
@@ -92,7 +100,6 @@ table {
 }
 td, th {
   padding: 6px;
-  //border: 1px solid #ccc;
   text-align: center;
 }
 table span{
@@ -115,7 +122,6 @@ table span{
     background-image: url('/assets/images/bg.png');
   }
   .container {
-    //width: 750px;
     position: relative;
   }
   header h1{
@@ -152,6 +158,9 @@ table span{
   table span{
     font-size: 28px;
   }
+}
+.text-center {
+  text-align: center;
 }
 @media (min-width: 992px) {
   .container {
