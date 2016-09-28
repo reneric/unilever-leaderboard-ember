@@ -7,6 +7,14 @@ import Entry from './resources/entry';
 
 class Client {
   request(url, options = {}) {
+    let myHeaders = {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json; charset=utf-8',
+      'Authorization': 'Token notasecrettoken'
+    };
+    options = Object.assign(options, {
+      headers: myHeaders
+    });
     let result = this._ajax(`http://unilever-leaderboard-api.herokuapp.com${url}`, options);
     const {middleware = []} = options;
     middleware.forEach(m => result = result.then(m));
@@ -54,6 +62,7 @@ class Client {
     options = Object.assign(options, {
       dataType: 'json'
     });
+    console.log(options);
     return new Ember.RSVP.Promise((resolve, reject) => {
       return $.ajax(url, options)
         .done((data, status, xhr) => {
