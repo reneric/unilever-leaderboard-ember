@@ -7,7 +7,7 @@ import Entry from './resources/entry';
 
 class Client {
   request(url, options = {}) {
-    let result = this._ajax(url, options);
+    let result = this._ajax(`http://unilever-leaderboard-api.herokuapp.com${url}`, options);
     const {middleware = []} = options;
     middleware.forEach(m => result = result.then(m));
     return result;
