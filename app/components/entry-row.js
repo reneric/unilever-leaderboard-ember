@@ -15,6 +15,15 @@ export default Ember.Component.extend({
     }
   ),
 
+  formattedScore: Ember.computed('score',
+    function() {
+      let total = Number(this.get('score'));
+      let minutes = Math.floor(total / 60);
+      let seconds = total - minutes * 60;
+      return `${minutes}:${seconds}`;
+    }
+  ),
+
   _place_suffix(i) {
     const s = ['th','st','nd','rd'];
     let v = i % 100;
