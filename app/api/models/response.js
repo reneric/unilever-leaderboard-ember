@@ -1,4 +1,4 @@
-/* global parseLinks */
+/* global parseInt */
 
 export default class Response {
   constructor(xhr, client, requestOptions) {
