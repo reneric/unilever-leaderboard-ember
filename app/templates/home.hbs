@@ -8,11 +8,8 @@
   </thead>
   <tbody>
   {{#each entries as |entry index|}}
-    <tr>
-      <td>{{place index}}</td>
-      <td><span>{{entry.score}}</span></td>
-      <td><span>{{entry.name}}</span></td>
-    </tr>
+    {{entry-row entry=entry
+                index=index}}
   {{/each}}
   </tbody>
 </table>

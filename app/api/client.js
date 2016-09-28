@@ -62,7 +62,6 @@ class Client {
     options = Object.assign(options, {
       dataType: 'json'
     });
-    console.log(options);
     return new Ember.RSVP.Promise((resolve, reject) => {
       return $.ajax(url, options)
         .done((data, status, xhr) => {
