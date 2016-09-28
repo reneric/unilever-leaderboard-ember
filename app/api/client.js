@@ -15,7 +15,7 @@ class Client {
     options = Object.assign(options, {
       headers: myHeaders
     });
-    let result = this._ajax(`http://unilever-leaderboard-api.herokuapp.com${url}`, options);
+    let result = this._ajax(`https://unilever-leaderboard-api.herokuapp.com${url}`, options);
     const {middleware = []} = options;
     middleware.forEach(m => result = result.then(m));
     return result;
