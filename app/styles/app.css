@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'universbold';
-  src: url('../font/univers_bold2-webfont.woff2') format('woff2'),
-    url('../font/univers_bold2-webfont.woff') format('woff');
+  src: url('/assets/font/univers_bold2-webfont.woff2') format('woff2'),
+    url('/assets/font/univers_bold2-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -14,7 +14,7 @@ body{
 body:after{
   content: '';
   display: block;
-  background-image: url('../images/mobile-bg.png');
+  background-image: url('/assets/images/mobile-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -39,7 +39,7 @@ header{
 }
 
 .header-logo{
-  background: url(../images/logo.png) no-repeat;
+  background: url(/assets/images/logo.png) no-repeat;
   background-size: 100%;
   width: 63px;
   height: 90px;
@@ -50,7 +50,7 @@ header{
   display: none;
 }
 .colored-logo{
-  background: url(../images/colored-logo.png) no-repeat;
+  background: url(/assets/images/colored-logo.png) no-repeat;
   background-size: 100%;
   width: 85px;
   height: 100px;
@@ -111,7 +111,7 @@ table span{
 }
 @media (min-width: 768px) {
   body:after{
-    background-image: url('../images/bg.png');
+    background-image: url('/assets/images/bg.png');
   }
   .container {
     //width: 750px;
