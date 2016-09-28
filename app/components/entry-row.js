@@ -16,17 +16,8 @@ export default Ember.Component.extend({
   ),
 
   _place_suffix(i) {
-    let j = i % 10;
-    let k = i % 100;
-    if (j == 1 && k != 11) {
-      return `${i}st`;
-    }
-    if (j == 2 && k != 12) {
-      return `${i}nd`;
-    }
-    if (j == 3 && k != 13) {
-      return `${i}rd`;
-    }
-    return `${i}th`;
+    const s = ['th','st','nd','rd'];
+    let v = i % 100;
+    return i + (s[(v - 20) % 10] || s[v] || s[0]);
   }
 });
