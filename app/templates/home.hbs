@@ -1,0 +1,35 @@
+<header>
+  <div class="container">
+    <h1>Global goals for a <br>brightfuture</h1>
+    <h3 class="header-logo">
+      <a href=""></a>
+    </h3>
+  </div>
+</header>
+<div id="site-content">
+  <div class="container">
+    <div class="wrap">
+      <h3 class="colored-logo">
+        <a href=""></a>
+      </h3>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Time</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each entries as |entry index|}}
+          <tr>
+            <td>{{place index}}</td>
+            <td><span>{{entry.score}}</span></td>
+            <td><span>{{entry.name}}</span></td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

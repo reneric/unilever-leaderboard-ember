@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  ember:
+    extends:
+      file: docker-compose-base.yml
+      service: ember
+    ports:
+      - "3000:4200"
+      - "49152:49152"
+    environment:
+      VIRTUAL_HOST: lb-ember.docker
