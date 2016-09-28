@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   index: 0,
   score: Ember.computed.alias('entry.score'),
   name: Ember.computed.alias('entry.name'),
-  places: 1,
+
   place: Ember.computed('index',
     function() {
       let index = Number(this.get('index'));
