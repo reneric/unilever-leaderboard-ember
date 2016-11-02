@@ -1,0 +1,44 @@
+body{
+	margin: 0;
+	padding:0;
+	border: none;
+}
+
+.ie_version, 
+p.ie6, 
+p.ie7, 
+p.ie8, 
+p.ie9{
+	display: none;
+	color: red;
+}
+
+.ie .ie_version{
+	display: block;
+}
+.ie6 p.ie6{
+	display: block;
+}
+.ie7 p.ie7{
+	display: block;
+}
+.ie8 p.ie8{
+	display: block;
+}
+.ie9 p.ie9{
+	display: block;
+}
+
+
+.bw_section{
+	display: none;
+	width: 100%;
+	min-height: 100%;
+	padding: 0;
+	box-sizing: border-box;
+	background:#fff;
+}
+
+*{
+	font-family: Arial, sans-serif;
+}
