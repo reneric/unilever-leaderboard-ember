@@ -1,6 +1,3 @@
-01:03:09
-63091000
-
 function DatabaseConnection()
 {
 	var self = this;
