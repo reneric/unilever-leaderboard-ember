@@ -1,0 +1,307 @@
+<div id="game" class="bw_section">
+
+          <div id="splash" class="game-page active">
+              <button id="btn-start" class="nav-btn">START</button>
+            </div>
+
+          <div id="map" class="game-page">
+              <div class="game-btns">
+                    <div id="game-btn-1" class="game-btn-container">
+                        <h2>CHALLENGE 1</h2>
+                        <div class="game-btn">
+                          <div class="overlay-play"></div>
+                          <div class="overlay"></div>
+                        </div>
+                        <div class="stars">
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <div id="game-btn-2" class="game-btn-container">
+                        <h2>CHALLENGE 2</h2>
+                        <div class="game-btn locked">
+                          <div class="overlay-play"></div>
+                          <div class="overlay"></div>
+                        </div>
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <div id="game-btn-3" class="game-btn-container">
+                        <h2>CHALLENGE 3</h2>
+                        <div class="game-btn locked">
+                          <div class="overlay-play"></div>
+                          <div class="overlay"></div>
+                        </div>
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          <div id="game-1" class="game-page">
+              <div class="desc">All the <strong>Global Goals</strong> can be mapped to our <strong>USLP</strong>.<br />See if you can match these goals to our USLP pillars.</div>
+
+                <div class="panels">
+                    <div id="panel-1" class="zone-panel">
+                        <div class="icon"></div>
+                        <div class="desc">Improving Health<br />and Well-being</div>
+                        <div class="zones">
+                            <div id="zone-1" data-identifier="1" class="zone droppable"></div><div id="zone-2" data-identifier="1" class="zone droppable"></div>
+                        </div>
+                        <div class="icon-tick"></div>
+                        <div class="icon-oops"></div>
+                    </div>
+                    <div id="panel-2" class="zone-panel">
+                        <div class="icon"></div>
+                        <div class="desc">Reducing Environmental Impact</div>
+                        <div class="zones">
+                            <div id="zone-3" data-identifier="2" class="zone droppable"></div><div id="zone-4" data-identifier="2" class="zone droppable"></div>
+                        </div>
+                        <div class="icon-tick"></div>
+                        <div class="icon-oops"></div>
+                    </div>
+                    <div id="panel-3" class="zone-panel">
+                        <div class="icon"></div>
+                        <div class="desc">Enhancing Livelihoods</div>
+                        <div class="zones">
+                            <div id="zone-5" data-identifier="3" class="zone droppable"></div><div id="zone-6" data-identifier="3" class="zone droppable"></div>
+                        </div>
+                        <div class="icon-tick"></div>
+                        <div class="icon-oops"></div>
+                    </div>
+                </div>
+
+                <div class="gg-tiles"></div>
+
+            </div>
+
+          <div id="game-2" class="game-page">
+              <div class="desc">Now match these <strong>Global Goals</strong> to the brands you see here.</div>
+
+                <div class="panels">
+                    <div id="panel-1" class="zone-panel">
+                        <div class="icon"></div>
+                        <div id="zone-1" data-identifier="1" class="zone droppable"></div>
+                        <div class="icon-tick"></div>
+                        <div class="icon-oops"></div>
+                    </div>
+                    <div id="panel-2" class="zone-panel">
+                        <div class="icon"></div>
+                        <div id="zone-2" data-identifier="2" class="zone droppable"></div>
+                        <div class="icon-tick"></div>
+                        <div class="icon-oops"></div>
+                    </div>
+                    <div id="panel-3" class="zone-panel">
+                        <div class="icon"></div>
+                        <div id="zone-3" data-identifier="3" class="zone droppable"></div>
+                        <div class="icon-tick"></div>
+                        <div class="icon-oops"></div>
+                    </div>
+                </div>
+
+                <div class="gg-tiles"></div>
+
+            </div>
+
+          <div id="game-3" class="game-page">
+              <div class="desc">Try matching the brands below with their <strong>Unilever Sustainable Living Plan ambition</strong> to the <strong>Global Goals</strong>.</div>
+
+                <div id="g3-container">
+
+                    <div class="question-panel">
+                        <div class="desc"></div>
+                        <div class="icon"></div>
+                    </div>
+
+                    <div class="panels">
+                        <div id="panel-1" class="zone-panel">
+                            <div id="zone-1" data-identifier="1" class="zone droppable"></div>
+                            <div class="icon-tick"></div>
+                            <div class="icon-oops"></div>
+                        </div>
+                        <div id="panel-2" class="zone-panel">
+                            <div id="zone-2" data-identifier="1" class="zone droppable"></div>
+                            <div class="icon-tick"></div>
+                            <div class="icon-oops"></div>
+                        </div>
+                    </div>
+
+                    <div class="gg-tiles"></div>
+
+                </div>
+
+            </div>
+
+          <div id="overlay" class="hidden"></div>
+
+          <div id="end-game-1" class="modal-view hidden">
+              <h1>That's a great start!</h1>
+              <button id="btn-close" class="nav-btn">KEEP GOING</button>
+            </div>
+
+          <div id="end-game-2" class="modal-view hidden">
+              <h1>That was nice and<br />easy, right?</h1>
+                <p><strong>Now get ready for the final game</strong></p>
+              <button id="btn-close" class="nav-btn">GO!</button>
+            </div>
+
+          <div id="game-3-intro" class="modal-view hidden">
+              <h1>Now it’s time to<br />beat the clock!</h1>
+                <p>Our Sustainable Living Brands are helping us create a <br /><strong>brighter future</strong> so everyone can enjoy life today while <br />protecting the planet for future generations. </p>
+                <p><strong>Beat the clock and find out how.</strong></p>
+              <button id="btn-close" class="nav-btn" style="margin-top:25px;">Continue</button>
+            </div>
+
+          <div id="end-game-3" class="modal-view hidden">
+              <h1>Congratulations!</h1>
+                <p>You completed the Global Goals Challenge in</p>
+                <p><span id="gametime"></span></p>
+                <p>To stand a chance to win a fun prize submit your score now</p>
+              <button id="btn-close" class="nav-btn" style="margin-top:25px;">Submit</button>
+                <p style="margin-top:25px;"><strong>If you think you can beat your current score, play again!</strong></p>
+              <button id="btn-replay" class="nav-btn" style="margin-top:25px;">Replay</button>
+            </div>
+
+          <div id="modal-help" class="modal-view hidden">
+              <div class="icon"></div>
+              <h1>How to play</h1>
+                <p>There are three simple challenges to play.</p>
+
+        <p><strong>Challenges 1</strong> and <strong>2</strong> involve matching <strong>Global Goals</strong> to our <strong>USLP</strong> pillars and some of our <strong>brands</strong> using <strong>'drag and drop'.</strong></p>
+
+        <p><strong>Challenge 3</strong> is a timed <strong>‘beat the clock’</strong> game where you have to match our <strong>Sustainable Living Brands</strong>, their <strong>USLP</strong> ambitions and the <strong>Global Goals.</strong></p>
+
+        <p>The <strong>Refresh</strong> button will reset the challenges and return to the start screen.</p>
+
+                <p>Fastest time wins a fun prize.<br /><a href="http://inside.unilever.com/global/brightfuture/Pages/GlobalGoalsChallengeTandCs.aspx" style="text-decoration: none; color: rgb(43, 105, 178);" target="_blank">Terms and Conditions</a> apply.</p>
+              <button id="btn-close" class="btn-x"></button>
+            </div>
+
+            <div id="hud" class="hidden">
+              <div class="hud-btns">
+                  <button id="btn-help" class="hud-btn"></button>
+                  <button id="btn-replay" class="hud-btn"></button>
+                </div>
+              <div class="hud-num-questions hidden"><span>Q2</span> / 10</div>
+              <div class="hud-time">TIME: <span>00:00:00</span></div>
+            </div>
+    </div>
+
+
+    <div id="score_form" class="bw_section pattern-bg">
+          <h1>Before you submit your time, tell us about yourself.</h1>
+      <form>
+        <table>
+          <tr>
+            <td>
+              <label for="user_event">Event/School:</label><select id="user_event">
+                <option value="null" selected>Please select</option>
+                <optgroup label="Events">
+                  <option value="Consortium">Consortium</option>
+                  <option value="Enactus">Enactus</option>
+                  <option value="Jackie Robinson Foundation">Jackie Robinson Foundation</option>
+                  <option value="Net Impact">Net Impact</option>
+                  <option value="One Young World">One Young World</option>
+                  <option value="Out and Equal">Out and Equal</option>
+                  <option value="RecruitMilitary">RecruitMilitary</option>
+                  <option value="Society of Hispanic Professionals">Society of Hispanic Professionals</option>
+                  <option value="Society of Women Engineers">Society of Women Engineers</option>
+                </optgroup>
+                <optgroup label="Schools">
+                  <option value="Columbia University">Columbia University</option>
+                  <option value="Howard University">Howard University</option>
+                  <option value="Michigan State">Michigan State</option>
+                  <option value="Northwestern">Northwestern</option>
+                  <option value="NYU">NYU</option>
+                  <option value="Ohio State University">Ohio State University</option>
+                  <option value="Penn State">Penn State</option>
+                  <option value="Rutgers">Rutgers</option>
+                  <option value="UCONN">UCONN</option><option value="University of Maryland">University of Michigan</option>
+                  <option value="University of Michigan">University of Michigan</option>
+                  <option value="University of Pennsylvania">University of Pennsylvania</option>
+                  <option value="University of Tennessee">University of Tennessee</option>
+                  <option value="University of Vermont">University of Vermont</option>
+                </optgroup>
+
+                <!-- <option value="event_other">OTHER</option> -->
+                <option value="OTHER">OTHER</option>
+
+
+              </select>
+            </td>
+          </tr>
+          <tr id="specify_other">
+            <td><label for="other_event">Specify other:</label><input id="other_event" name="other_event" type="text" /></td>
+          </tr>
+          <tr>
+            <td><label for="user_firstname">First Name:</label><input id="user_firstname" name="user_firstname" type="text" /></td>
+          </tr>
+          <tr>
+            <td><label for="user_lastname">Last Name:</label><input id="user_lastname" name="user_lastname" type="text" /></td>
+          </tr>
+          <tr>
+            <td><label for="user_email">Email:</label><input id="user_email" name="mco_region" type="text" /></td>
+          </tr>
+<!--
+          <tr>
+            <td><label for="user_goal">Global Goal:</label><select id="user_goal">
+              <option value="null" selected>Please select</option>
+                            <option value="goal_1">1 - No Poverty</option>
+                            <option value="goal_2">2 - Zero Hunger</option>
+                            <option value="goal_3">3 - Good Health and Well-Being</option>
+                            <option value="goal_4">4 - Quality Education</option>
+                            <option value="goal_5">5 - Gender Equality</option>
+                            <option value="goal_6">6 - Clean Water and Sanitation</option>
+                            <option value="goal_7">7 - Affordable and Clean Energy</option>
+                            <option value="goal_8">8 - Decent Work and Economic Growth</option>
+                            <option value="goal_9">9 - Industry, Innovation and Infrastructure</option>
+                            <option value="goal_10">10 - Reduced Inequalities</option>
+                            <option value="goal_11">11 - Sustainable Cities and Communities</option>
+                            <option value="goal_12">12 - Responsible Consumption and Production</option>
+                            <option value="goal_13">13 - Climate Action</option>
+                            <option value="goal_14">14 - Life Below Water</option>
+                            <option value="goal_15">15 - Life on Land</option>
+                            <option value="goal_16">16 - Peace and Justice Strong Institutions</option>
+                            <option value="goal_17">17 - Partnerships for the Goals</option>
+            </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="user_name">Name:</label><input id="user_name" name="user_name" type="text" /></td>
+          </tr>
+-->
+          <tr>
+            <td><label for="user_game_score">Time:</label><input id="user_game_score" name="score" type="text" /></td>
+          </tr>
+<!--
+          <tr>
+            <td><label for="user_mco_region">MCO:</label><input id="user_mco_region" name="mco_region" type="text" /></td>
+          </tr>
+-->
+        </table>
+        <p>Submit your time now.</p>
+                <div class="btn-container">
+                    <button id="submit_score" class="nav-btn">SUBMIT MY TIME</button>
+                </div>
+      </form>
+
+    </div>
+
+    <div id="feedback" class="bw_section pattern-bg">
+          <h1>Thank you</h1>
+      <p>for taking the Global Goals Challenge, keep your eye on the leader board to see how you are doing against other players.</p>
+
+      <h3>Why not challenge others to see how much they know about the Global Goals and how our Sustainable Living Brands are making them a reality.</h3>
+      <button class="share_game nav-btn">Invite others to play</button>
+
+      <h3>Replay the game if you’d still like to improve your time!</h3>
+      <button class="play_again nav-btn">REPLAY THE GAME</button>
+
+            <p>To learn more about what Unilever is doing to bring the goals to life <br />visit the <a href="http://inside.unilever.com/global/brightfuture/Pages/GlobalGoals.aspx" style="text-decoration: none; color: rgb(43, 105, 178);" target="_blank">Global Goals hub</a>.</p>
+
+
+    </div>
