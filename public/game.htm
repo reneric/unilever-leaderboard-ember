@@ -3,24 +3,24 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name='viewport' content="width=device-width, initial-scale=1" />
-		
+
 		<meta charset="UTF-8">
 		<title>Global Goals Game</title>
-		
+
 		<script type="text/javascript" language="javascript">
 			var devmode = true;
 			var $game;
 			var $form;
-	
+
 			var $user_name;
 			var $user_mco;
 			var $user_score;
 			var $user_goal;
-			
+
 			// sounds
 			var sndCongrats, sndCorrect, sndIncorrect, sndStars, sndTic;
-			
-	
+
+
 			if (!window.console) console = {};
 			if (!window.console.log) console.log = function (txt) { };
 			if (!window.console.trace) console.trace = function(){ console.log( "console.trace doesn't work in IE "); };
@@ -29,24 +29,24 @@
 			if (!window.console.group) console.group = function(txt){ console.log( "GROUP > " + txt); };
 			if (!window.console.groupEnd) console.groupEnd = function(txt){ console.log( "GROUPEND " ); };
 		</script>
-        
+
 		<!-- /* jquery */ -->
-		<script type="text/javascript" language="javascript" id="js_jquery" src="lib/js/jquery/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" language="javascript" id="js_jquery_migrate" src="lib/js/jquery/jquery-migrate-1.2.1.min.js"></script>
-		<script type="text/javascript" src="lib/js/jquery/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="lib/js/jquery/jquery.ui.touch-punch.min.js"></script>
-		<!-- <script type="text/javascript" src="lib/js/jquery/jquery.SPServices-2014.01.min.js"></script> -->
-	
-		<script type="text/javascript" language="javascript" id="js_connection" src="lib/js/bw/database_connection.js"></script>
-		<script type="text/javascript" language="javascript" id="js_document" src="lib/js/bw/document.js"></script>
-		<script type="text/javascript" language="javascript" id="js_document" src="lib/js/bw/game.js"></script>
-		
-		<link id="common_css" rel="stylesheet" type="text/css" href="lib/css/common.css" media="screen and (min-width: 800px)" />
-		<link id="game_css" rel="stylesheet" type="text/css" href="lib/css/game.css" media="screen and (min-width: 800px)" />
-		
-		<link id="common_phone_css" rel="stylesheet" type="text/css" href="lib/css/common_phone.css" media="screen and (max-width: 799px)"  />
-		<link id="game_phone_css" rel="stylesheet" type="text/css" href="lib/css/game_phone.css" media="screen and (max-width: 799px)"  />
-		
+		<script type="text/javascript" language="javascript" id="js_jquery" src="vendor/js/jquery/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" language="javascript" id="js_jquery_migrate" src="vendor/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="vendor/js/jquery/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="vendor/js/jquery/jquery.ui.touch-punch.min.js"></script>
+		<!-- <script type="text/javascript" src="vendor/js/jquery/jquery.SPServices-2014.01.min.js"></script> -->
+
+		<script type="text/javascript" language="javascript" id="js_connection" src="vendor/js/bw/database_connection.js"></script>
+		<script type="text/javascript" language="javascript" id="js_document" src="vendor/js/bw/document.js"></script>
+		<script type="text/javascript" language="javascript" id="js_document" src="vendor/js/bw/game.js"></script>
+
+		<link id="common_css" rel="stylesheet" type="text/css" href="vendor/css/common.css" media="screen and (min-width: 800px)" />
+		<link id="game_css" rel="stylesheet" type="text/css" href="vendor/css/game.css" media="screen and (min-width: 800px)" />
+
+		<link id="common_phone_css" rel="stylesheet" type="text/css" href="vendor/css/common_phone.css" media="screen and (max-width: 799px)"  />
+		<link id="game_phone_css" rel="stylesheet" type="text/css" href="vendor/css/game_phone.css" media="screen and (max-width: 799px)"  />
+
 	</head>
 
 <!--[if lt IE 7]>  <body onLoad="init()" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
@@ -62,14 +62,14 @@
 			<p class="ie8">Internet Explorer 8</p>
 			<p class="ie9">Internet Explorer 9</p>
 		</div>
-	
-		
+
+
 		<div id="game" class="bw_section">
-        	
+
         	<div id="splash" class="game-page active">
             	<button id="btn-start" class="nav-btn">START</button>
             </div>
-            
+
         	<div id="map" class="game-page">
             	<div class="game-btns">
                     <div id="game-btn-1" class="game-btn-container">
@@ -107,10 +107,10 @@
                     </div>
                 </div>
             </div>
-            
+
         	<div id="game-1" class="game-page">
             	<div class="desc">All the <strong>Global Goals</strong> can be mapped to our <strong>USLP</strong>.<br />See if you can match these goals to our USLP pillars.</div>
-                
+
                 <div class="panels">
                     <div id="panel-1" class="zone-panel">
                         <div class="icon"></div>
@@ -140,14 +140,14 @@
                         <div class="icon-oops"></div>
                     </div>
                 </div>
-                
+
                 <div class="gg-tiles"></div>
-                        
+
             </div>
-            
+
         	<div id="game-2" class="game-page">
             	<div class="desc">Now match these <strong>Global Goals</strong> to the brands you see here.</div>
-                
+
                 <div class="panels">
                     <div id="panel-1" class="zone-panel">
                         <div class="icon"></div>
@@ -168,21 +168,21 @@
                         <div class="icon-oops"></div>
                     </div>
                 </div>
-                
+
                 <div class="gg-tiles"></div>
-                
+
             </div>
-            
+
         	<div id="game-3" class="game-page">
             	<div class="desc">Try matching the brands below with their <strong>Unilever Sustainable Living Plan ambition</strong> to the <strong>Global Goals</strong>.</div>
-                
+
                 <div id="g3-container">
-                
+
                     <div class="question-panel">
                         <div class="desc"></div>
-                        <div class="icon"></div>	
+                        <div class="icon"></div>
                     </div>
-                    
+
                     <div class="panels">
                         <div id="panel-1" class="zone-panel">
                             <div id="zone-1" data-identifier="1" class="zone droppable"></div>
@@ -195,33 +195,33 @@
                             <div class="icon-oops"></div>
                         </div>
                     </div>
-                    
+
                     <div class="gg-tiles"></div>
-                    
+
                 </div>
-                
+
             </div>
-            
+
         	<div id="overlay" class="hidden"></div>
-            
+
         	<div id="end-game-1" class="modal-view hidden">
             	<h1>That's a great start!</h1>
             	<button id="btn-close" class="nav-btn">KEEP GOING</button>
             </div>
-            
+
         	<div id="end-game-2" class="modal-view hidden">
             	<h1>That was nice and<br />easy, right?</h1>
                 <p><strong>Now get ready for the final game</strong></p>
             	<button id="btn-close" class="nav-btn">GO!</button>
             </div>
-            
+
         	<div id="game-3-intro" class="modal-view hidden">
             	<h1>Now it’s time to<br />beat the clock!</h1>
                 <p>Our Sustainable Living Brands are helping us create a <br /><strong>brighter future</strong> so everyone can enjoy life today while <br />protecting the planet for future generations. </p>
                 <p><strong>Beat the clock and find out how.</strong></p>
             	<button id="btn-close" class="nav-btn" style="margin-top:25px;">Continue</button>
             </div>
-            
+
         	<div id="end-game-3" class="modal-view hidden">
             	<h1>Congratulations!</h1>
                 <p>You completed the Global Goals Challenge in</p>
@@ -231,7 +231,7 @@
                 <p style="margin-top:25px;"><strong>If you think you can beat your current score, play again!</strong></p>
             	<button id="btn-replay" class="nav-btn" style="margin-top:25px;">Replay</button>
             </div>
-            
+
         	<div id="modal-help" class="modal-view hidden">
             	<div class="icon"></div>
             	<h1>How to play</h1>
@@ -240,13 +240,13 @@
 				<p><strong>Challenges 1</strong> and <strong>2</strong> involve matching <strong>Global Goals</strong> to our <strong>USLP</strong> pillars and some of our <strong>brands</strong> using <strong>'drag and drop'.</strong></p>
 
 				<p><strong>Challenge 3</strong> is a timed <strong>‘beat the clock’</strong> game where you have to match our <strong>Sustainable Living Brands</strong>, their <strong>USLP</strong> ambitions and the <strong>Global Goals.</strong></p>
-                
+
 				<p>The <strong>Refresh</strong> button will reset the challenges and return to the start screen.</p>
-				
-                <p>Fastest time wins a fun prize.<br /><a href="http://inside.unilever.com/global/brightfuture/Pages/GlobalGoalsChallengeTandCs.aspx" style="text-decoration: none; color: rgb(43, 105, 178);" target="_blank">Terms and Conditions</a> apply.</p> 
+
+                <p>Fastest time wins a fun prize.<br /><a href="http://inside.unilever.com/global/brightfuture/Pages/GlobalGoalsChallengeTandCs.aspx" style="text-decoration: none; color: rgb(43, 105, 178);" target="_blank">Terms and Conditions</a> apply.</p>
             	<button id="btn-close" class="btn-x"></button>
             </div>
-            
+
             <div id="hud" class="hidden">
             	<div class="hud-btns">
                 	<button id="btn-help" class="hud-btn"></button>
@@ -254,10 +254,10 @@
                 </div>
             	<div class="hud-num-questions hidden"><span>Q2</span> / 10</div>
             	<div class="hud-time">TIME: <span>00:00:00</span></div>
-            </div>	
+            </div>
 		</div>
-		
-		
+
+
 		<div id="score_form" class="bw_section pattern-bg">
         	<h1>Before you submit your time, tell us about yourself.</h1>
 			<form>
@@ -292,11 +292,11 @@
 									<option value="University of Tennessee">University of Tennessee</option>
 									<option value="University of Vermont">University of Vermont</option>
 								</optgroup>
-								
+
 								<!-- <option value="event_other">OTHER</option> -->
 								<option value="OTHER">OTHER</option>
-								
-								
+
+
 							</select>
 						</td>
 					</tr>
@@ -312,7 +312,7 @@
 					<tr>
 						<td><label for="user_email">Email:</label><input id="user_email" name="mco_region" type="text" /></td>
 					</tr>
-<!-- 					
+<!--
 					<tr>
 						<td><label for="user_goal">Global Goal:</label><select id="user_goal">
 							<option value="null" selected>Please select</option>
@@ -343,10 +343,10 @@
 					<tr>
 						<td><label for="user_game_score">Time:</label><input id="user_game_score" name="score" type="text" /></td>
 					</tr>
-<!-- 					
+<!--
 					<tr>
 						<td><label for="user_mco_region">MCO:</label><input id="user_mco_region" name="mco_region" type="text" /></td>
-					</tr> 
+					</tr>
 -->
 				</table>
 				<p>Submit your time now.</p>
@@ -354,16 +354,16 @@
                     <button id="submit_score" class="nav-btn">SUBMIT MY TIME</button>
                 </div>
 			</form>
-			
+
 		</div>
-		
+
 		<div id="feedback" class="bw_section pattern-bg">
         	<h1>Thank you</h1>
 			<p>for taking the Global Goals Challenge, keep your eye on the leader board to see how you are doing against other players.</p>
-			
+
 			<h3>Why not challenge others to see how much they know about the Global Goals and how our Sustainable Living Brands are making them a reality.</h3>
 			<button class="share_game nav-btn">Invite others to play</button>
-			
+
 			<h3>Replay the game if you’d still like to improve your time!</h3>
 			<button class="play_again nav-btn">REPLAY THE GAME</button>
 
@@ -371,8 +371,8 @@
 
 
 		</div>
-		
+
 	</body>
-	
+
 </html>
 
