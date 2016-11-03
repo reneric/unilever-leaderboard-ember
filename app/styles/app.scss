@@ -97,6 +97,18 @@ table {
     font-size: 20px;
   }
 }
+.row.loader {
+  margin-top: -7em;
+  p {
+    color: #0062ab;
+  }
+}
+table.loading-table {
+  tbody tr td {
+    opacity: 0;
+    height:0;
+  }
+}
 td {
   padding: 6px;
   text-align: center;
@@ -667,6 +679,13 @@ overflow:hidden; font-family: 'DINPro-Regular' !important; color:#4c4d4d;
   margin: 0;
   padding:0;
   border: none;
+}
+
+.row.loader {
+  margin-top: -6.5em;
+  p {
+    font-size: 1.4em;
+  }
 }
 
 .ie_version,
