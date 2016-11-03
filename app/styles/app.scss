@@ -644,7 +644,7 @@ overflow:hidden; font-family: 'DINPro-Regular' !important; color:#4c4d4d;
 #feedback strong, #score_form strong { font-family: 'DINPro-Bold' !important; }
 #feedback p, #score_form p {  font-family: 'DINPro-Regular'; }
 #score_form form select {background: #fff url(lib/images/arrow-select@2x.png) no-repeat;background-position: 98% 50%;background-size: 15px 8px;}
-#score_form label { display:inline-block; width:35%; text-align:right; padding-right: 20px; font-weight: 600;font-family: 'DINPro-Regular'; }
+#score_form label { font-size:25px; font-size:25px; display:inline-block; width:35%; text-align:right; padding-right: 20px; font-weight: 600;font-family: 'DINPro-Regular'; }
 #score_form .btn-container { text-align:center; }
 #score_form .btn-container button { display:inline-block; width: 34%; padding: 10px 0; margin: 0 4%; }
 
@@ -1105,7 +1105,7 @@ p.ie9{
 #feedback strong, #score_form strong { font-family: 'DINPro-Bold' !important; }
 #feedback p, #score_form p {  font-family: 'DINPro-Regular'; }
 #score_form form select {background: #fff url(lib/images/arrow-select@2x.png) no-repeat;background-position: 98% 50%;background-size: 15px 8px;width: 100%;}
-#score_form label {display:inline-block;width: 100%;text-align: left;padding-right: 20px;font-weight: 600;font-family: 'DINPro-Regular';}
+#score_form label { font-size:25px;display:inline-block;width: 100%;text-align: left;padding-right: 20px;font-weight: 600;font-family: 'DINPro-Regular';}
 #score_form .btn-container { text-align:center; }
 #score_form .btn-container button {display:inline-block;width: 92%;padding: 10px 0;margin: 0 4% 20px 4%;}
 
