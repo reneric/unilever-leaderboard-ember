@@ -27,6 +27,9 @@ export default Ember.Component.extend({
       if (seconds.toString().length == 1) {
         seconds = `0${seconds}`;
       }
+      if (minutes.toString().length == 1) {
+        minutes = `0${minutes}`;
+      }
       return `${minutes}:${seconds}:${ms}`;
     }
   ),
