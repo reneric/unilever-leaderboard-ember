@@ -1,7 +1,8 @@
 export default {
   getEntries(query, options) {
     if (query === null) {
-      query = {};
+      query = {
+      };
     }
     if (options === null) {
       options = {};
