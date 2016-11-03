@@ -18,7 +18,7 @@ function DatabaseConnection()
 				break;
 			case "debug": request_address = 'https://private-anon-c0ea1d31b1-unileverleaderboard.apiary-proxy.com/entries/';
 				break;
-			case "production": request_address = 'https://unilever-leaderboard-api.herokuapp.com/entries/';
+			case "production": request_address = 'https://unilever-leaderboard-api.herokuapp.com/entries/?direction=desc';
 				break;
 			default: console.log('request address not set');
 				break;
