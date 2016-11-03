@@ -17,10 +17,18 @@ export default Ember.Component.extend({
 
   formattedScore: Ember.computed('score',
     function() {
-      let total = Number(this.get('score'));
-      let minutes = Math.floor(total / 60);
-      let seconds = total - minutes * 60;
-      return `${minutes}:${seconds}`;
+      let score = Number(this.get('score'))/1000;
+      let str = `${score}`;
+      let time = str.slice(0, -1);
+      let length = time.length
+      let sLength = length - 2;
+      let ms = time.substr(-2, 2);
+      let s = time.slice(0, -2);
+      // let s = time.substr(-4, 2);
+      // let seconds = total - minutes * 60;
+      // return `${minutes}:${seconds}:${ms}`;
+
+      return `${time}:${s}:${ms}`;
     }
   ),
 
